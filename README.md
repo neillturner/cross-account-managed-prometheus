@@ -45,6 +45,10 @@ In this example there are 2 AWS accounts prod and dev that have EKS clusters, an
 
 Contains terraform to create the managed prometheus workspaces and cross-account roles and policies. It assumes that there are 3 terraform workspaces - dev, prod, and management. 
 
+## Alerts
+
+Example alert rules for EKS kubernetes at [neillturner/alerting_rules.yml](https://gist.github.com/neillturner/45915fdbfb3359d7d98b97fee281eadb)
+
 ## kubernetes directory 
 
 Contains the kubernetes yaml definitions for the prometheus server in the dev EKS cluster using the public helm chart. then can be applied with [flux](https://fluxcd.io/docs/) in a gitops fashion or modify to use helm/kubectl using [prometheus helm chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus). Its necessary to update prometheus.yaml for the fields: 
